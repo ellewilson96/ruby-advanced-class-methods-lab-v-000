@@ -46,6 +46,23 @@ end
    self.all.sort_by{|song| song.name}
  end
 
+ def self.new_from_filename(filename)
+   artist_name, song = filename[0...-4].split(" - ")
+    new_song = self.new_by_name(song)
+    new_song.artist_name = artist_name
+    new_song
+  end
+
+  def self.create_from_filename(filename)
+    artist_name, song = filename[0...-4].split(" - ")
+    new_song = self.create_by_name(song)
+    new_song.artist_name = artist_name
+    new_song
+  end
+
+def self.destroy_all
+    self.all.clear
+  end
 
 
 end
