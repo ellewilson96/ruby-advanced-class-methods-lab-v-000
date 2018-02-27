@@ -44,10 +44,8 @@ end
 
   def self.alphabetical(name)
     self.all.sort_by(name)
-
+end
 
 
 
 end
-
-
