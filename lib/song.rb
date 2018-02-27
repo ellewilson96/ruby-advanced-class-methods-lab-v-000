@@ -28,7 +28,7 @@ class Song
   end
 
   def self.find_by_name(name)
-    if self.include?("{name}")
+    if self.all.detect{|person| person.name==(name)}
       name
     else
       nil
